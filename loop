@@ -1,0 +1,56 @@
+import java.io.*;
+import java.util.Scanner;
+public class loop
+
+{
+    public static void main(String[] args)
+    {
+       
+        String stat = "This String has vowels and 12345 digits.";
+  
+  
+        char[] let = stat.toCharArray();
+  
+        int count = 0;
+        int space = 0;
+        int digits = 0;
+        int upper = 0;
+  
+        for (int i = 0; i < stat.length(); i++)
+        {
+    
+            if (stat.charAt(i) == 'a' || stat.charAt(i) == 'e'
+                || stat.charAt(i) == 'i'
+                || stat.charAt(i) == 'o'
+                || stat.charAt(i) == 'u')
+            {
+               
+                count++;
+            }
+            
+            else if(let[i]>='0' && let[i]<='9')
+         {
+             digits++;
+         }
+             else if (let[i]==' ')
+         {
+        	space++;
+         }
+             else if(let[i]>='A' && let[i]<='Z')
+         {
+             upper++;
+         }
+       }
+        
+  
+        // display total count of vowels in string
+        System.out.println("Vowels = " + count);
+        System.out.println("Uppercase = " + upper);
+        System.out.println("Digits = " + digits);
+        System.out.println("White Spaces = " + space);
+          
+      }
+      
+}
+
+
